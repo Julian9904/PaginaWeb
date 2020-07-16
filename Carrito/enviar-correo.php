@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\Exception;
 require 'PHPMailer/Exception.php';
 require 'PHPMailer/PHPMailer.php';
 require 'PHPMailer/SMTP.php';
-require 'database.php';
+
 
 $nombre = $_POST['nombre'];
 $email = $_POST['email'];
