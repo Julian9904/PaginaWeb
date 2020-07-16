@@ -27,14 +27,16 @@ include 'templates/cabecera.php';
         <?php foreach($listaProductos as $producto){ ?>
             <div class="col-3">
                 <div class="card">
-                    <img
+                    <div class="card-header">
+                            <img
                     title="Mueble1" 
-                    class="card-img-top" src="<?php echo $producto['Imagen'];?>" alt="Titulo" heigth="300px">
+                    class="card-img-top img-fluid" src="<?php echo $producto['Imagen'];?>" alt="Titulo" heigth="200px">
+                        </div>
                     
                     <div class="card-body">
                         <span><?php echo $producto['Nombre'];?></span>
                         <h5 class="card-title">$<?php echo number_format($producto['Precio'],0) ;?></h5>
-                        <p class="card-text">Mueble de tela de tigre del amazonas</p>
+                        <p class="card-text"><?php echo $producto['Descripcion'];?></p>
                         
                     <form action="" method="post">
                     <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($producto['ID'],COD,KEY);?>">
@@ -141,7 +143,9 @@ include 'templates/cabecera.php';
                         <textarea name="msg" id="msg" cols="30" rows="4" placeholder="Dejanos tu inquietud."
                             class="form-control"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <div class="text-center">
+                            <button type="submit" class="btn btn-success w-50">Enviar</button>
+                        </div>
                 </form>
             </div>
         </div>
@@ -153,6 +157,13 @@ include 'templates/cabecera.php';
 include 'templates/pie.php';
 ?>
 
+        
+     <script>
+  $(window).bind('pageshow', function() { 
+        $('#name').val(''); 
+        $('#email').val(''); 
+        $('#msg').val(''); 
+    }); </script>
 
     <!-- Bootstrap core JavaScript -->
     <script src="../vendor/jquery/jquery.min.js"></script>
