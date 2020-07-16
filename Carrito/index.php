@@ -2,7 +2,7 @@
 include 'global/config.php';
 include 'global/conexion.php';
 include 'carrito.php';
-include 'templates/cabecera.php';
+include 'templates/cabecera-ppal.php';
 
 ?>
 
@@ -11,7 +11,7 @@ include 'templates/cabecera.php';
         <div class="alert alert-sucess">
             <?php echo $mensaje; ?>
 
-            <a href="mostrarCarrito.php" class="badge badge-sucess">Ver carrito</a>
+            <a href="mostrarCarrito.php" class="badge badge-success">Ver carrito</a>
         </div>
         <?php }?>
         <div class="row">
