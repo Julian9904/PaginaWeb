@@ -5,6 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito</title>
+    
+    <style>
+        #footer {
+            background-color: #1a1a1a;
+            padding: 40px 0 10px;
+            text-align: center;
+            color: #fff;
+        }
+
+        #footer a {
+            color: #fff;
+        }
+
+        #footer a:hover {
+            color: #f8f8f8;
+            text-decoration: none;
+        }
+
+        #footer .list-inline .list-inline-item {
+            padding: 10px 15px;
+        }
+    </style>
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- FONT AWESOME -->
