@@ -60,20 +60,6 @@ include 'templates/cabecera-ppal.php';
 
        
         </div>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap core CSS -->
-    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    
-    <title>Muebles el ángel</title>
-</head>
-
-<body>
     
 
     <div class="container">
@@ -158,18 +144,8 @@ include 'templates/pie.php';
 ?>
 
         
-     <script>
-  $(window).bind('pageshow', function() { 
-        $('#name').val(''); 
-        $('#email').val(''); 
-        $('#msg').val(''); 
-    }); </script>
+    
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
-    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
 
-</body>
-
-</html>
     
