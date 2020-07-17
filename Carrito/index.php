@@ -6,6 +6,20 @@ include 'templates/cabecera-ppal.php';
 
 ?>
 
+ <style>
+        #map{
+           height: 400px;
+            width: 100%;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
         <br>
         <?php if($mensaje!=""){?>
         <div class="alert alert-sucess">
@@ -74,7 +88,7 @@ include 'templates/cabecera-ppal.php';
         </div>
 
         <div class="row bg-light">
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -112,6 +126,51 @@ include 'templates/cabecera-ppal.php';
                     </a>
                 </div>
             </div>
+             
+             <!-- Ubicación -->
+            <div class="col-lg-6">
+                <div id='map'></div>
+                <script type="text/javascript">
+                    var map=L.map('map').setView([6.234270,-75.572955], 11);
+                    L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=3TlKatxZhaWucjV8rAKW',{attribution:'<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'}).addTo(map);
+                    
+                    var Latitud;
+                    var Longitud;  
+
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    Latitud =  position.coords.latitude;
+                    Longitud = position.coords.longitude;
+                
+                    marker_actual = L.marker([Latitud,Longitud]).addTo(map);
+                    marker_actual.bindPopup('<b>Hola </b><br>Tú estas aqui').openPopup();
+                    map.setView([Latitud,Longitud], 12);  
+                    
+                    console.log(Latitud);
+                    console.log(Longitud);
+                    }, function(err) {
+                        console.error(err);
+                    });
+                    var lat=6.177531;
+                    var lon=-75.609892;
+                    var marker1 = L.marker([lat,lon],{
+                                color: 'red',
+                                }).addTo(map);
+                    var polig = L.polygon([
+                                [lat+0.004,lon-0.004],
+                                [lat+0.004,lon+0.004],
+                                [lat-0.004,lon],
+                                ]).addTo(map);
+                    marker1.on('mouseover', function(e) {
+                    //open popup;
+                    var popup = L.popup()
+                    .setLatLng(e.latlng) 
+                    .setContent('<img  src="archivos/local.png" height="150px" width="150px">')
+                    .openOn(map);
+                    });
+                </script>
+            </div>
+                
+            
             <!-- Contacto -->
             <div class="col-lg-6">
                 <h2 class="text-center">Contáctanos</h2>
