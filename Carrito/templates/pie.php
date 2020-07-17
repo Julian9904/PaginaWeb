@@ -46,5 +46,12 @@
 
         </div>
     </footer>
+
+ <script>
+  $(window).bind('pageshow', function() { 
+        $('#name').val(''); 
+        $('#email').val(''); 
+        $('#msg').val(''); 
+    }); </script>
 </body>
 </html>
