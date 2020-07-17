@@ -27,27 +27,10 @@
             padding: 10px 15px;
         }
 
-        ul {
-            list-style: none;
-        }
-
-        nav li a{
-            background-color: #f8f8f8;
-            text-decoration: none;
-        }
-
-        nav > li{
-            float: left;
-        }
-
-        nav li ul{
-            display:none;
-            position:absolute;
-            min-width: 140px;
-        }
-
-        nav li:hover > ul{
-            display:block;
+       
+        
+        .dropdown .dropdown-menu.dropdown-primary .dropdown-item:hover{
+            background-color: #d8d8d8 !important;
         }
 
     </style>
@@ -82,15 +65,22 @@
                     <a class="nav-link" href="index.php">Inicio </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#categorias">Categorias </a>
-                    <ul>
-                        <li><a href="cama.php">Cama</a></li>
-                        <li><a href="sala.php">Sala</a></li>
-                        <li><a href="silla.php">Silla</a></li>
-                        <li><a href="sofat.php">Sofat</a></li>
-                        <li><a href="sofacama.php">Sofa cama</a></li>
-                        <li><a href="productos.php">Todos los productos</a></li>
-                    </ul>
+                    <div class="dropdown">
+
+                        <!--Trigger-->
+                        <a class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categorías</a>
+                        <!--Menu-->
+                        <div class="dropdown-menu dropdown-primary">
+                            <a class="dropdown-item" href="cama.php">Cama</a>
+                            <a class="dropdown-item" href="sala.php">Sala</a>
+                            <a class="dropdown-item" href="silla.php">Silla</a>
+                            <a class="dropdown-item" href="sofat.php">Sofat</a>
+                            <a class="dropdown-item" href="sofacama.php">Sofa cama</a>
+                            <a class="dropdown-item" href="productos.php">Todos los productos</a>
+                        </div>
+                    </div>
+                    <!--/Dropdown primary-->
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="mostrarCarrito.php"><i class="fas fa-shopping-cart"></i> (<?php 
