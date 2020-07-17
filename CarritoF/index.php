@@ -79,7 +79,7 @@ include 'templates/cabecera-ppal.php';
             </div>
             <div class="col-lg-6">
             <img
-                 class="card-img-top w-100" src="archivos/covid.jpg" alt="Titulo" height="360px">
+                 class="card-img-top w-100" src="archivos/prevencion.png" alt="Titulo" height="360px">
             </div>
              
         <div class="row bg-light">
