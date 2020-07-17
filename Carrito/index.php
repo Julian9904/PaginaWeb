@@ -41,11 +41,11 @@ include 'templates/cabecera-ppal.php';
         <?php foreach($listaProductos as $producto){ ?>
             <div class="col-3">
                 <div class="card">
-                    <div class="card-header">
-                            <img
-                    title="Mueble1" 
-                    class="card-img-top img-fluid" src="<?php echo $producto['Imagen'];?>" alt="Titulo" heigth="200px">
-                        </div>
+                    <div class="card-head"> 
+                        <img
+                        title="Mueble1" 
+                        class="card-img-top w-100" src="<?php echo $producto['Imagen'];?>" alt="Titulo" height="200px">
+                    </div>
                     
                     <div class="card-body">
                         <span><?php echo $producto['Nombre'];?></span>
