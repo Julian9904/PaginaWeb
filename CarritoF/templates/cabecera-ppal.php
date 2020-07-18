@@ -68,7 +68,7 @@
                     <div class="dropdown">
 
                         <!--Trigger-->
-                        <a class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1"
+                        <a class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu1"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categorías</a>
                         <!--Menu-->
                         <div class="dropdown-menu dropdown-primary">
